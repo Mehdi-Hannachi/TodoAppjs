@@ -14,17 +14,21 @@
     <section class="task-input">
         <span class="titre"> To-Do App ! </span>
         <span class="soustitre">Add New To-Do</span>
-        <input class="task" type="text" placeholder="Enter new  task" />
-        <button class="addbtn"> Add </button>
+        <input type="text" class="newtask" placeholder="Enter new  task" value="" />
+        <button onclick="addElement();" class="addbtn"> Add </button>
     </section>
 
     <p class="letsgo">Let's get some work done ! </p>
 
     <hr>
 
-    <section class="task-list">
 
-    </section>
+    <div id="mylist">
+
+    </div>
+
+
+
 
     <hr class="hrfooter">
 
@@ -34,7 +38,7 @@
     </footer>
 
 
-
+    <script src="todoapp.js"></script>
 
 </body>
 
