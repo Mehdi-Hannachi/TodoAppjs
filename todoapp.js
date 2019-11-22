@@ -2,22 +2,18 @@ function addElement() {
 
 
 
-
-
-
+    mylist = document.createElement("div");
+    mylist.classList.toggle("list");
 
 
     var complete = document.createElement("BUTTON");
     complete.classList.toggle("btn");
+
     var btnClose = document.createElement("BUTTON");
     btnClose.classList.toggle("btn");
+
     var element = document.createElement("span");
     element.classList.toggle("txt");
-
-
-
-
-
 
 
     var comp = document.createTextNode("Complete")
@@ -28,11 +24,6 @@ function addElement() {
     complete.appendChild(comp)
     btnClose.appendChild(close)
 
-
-
-
-
-
     var inputTask = document.querySelector(".newtask").value
     var task = document.createTextNode(inputTask)
     element.appendChild(task)
@@ -40,23 +31,29 @@ function addElement() {
     if (inputTask === '') {
         alert("You must enter a task");
     } else {
-        document.getElementById("mylist").appendChild(element)
 
-        document.getElementById("mylist").appendChild(complete).addEventListener('click', function(e) {
+        mylist.appendChild(complete).addEventListener('click', function(e) {
 
             element.classList.toggle("mystyle");
             complete.replaceChild(undo, comp)
 
         })
 
-        document.getElementById("mylist").appendChild(btnClose).addEventListener('click', function(ee) {
+        mylist.appendChild(btnClose).addEventListener('click', function(ee) {
             btnClose.remove()
             complete.remove()
             element.remove()
         })
 
+        mylist.appendChild(element)
+
+
+        document.getElementById("list").appendChild(mylist)
+
     }
     document.querySelector(".newtask").value = "";
+
+
 
 
 

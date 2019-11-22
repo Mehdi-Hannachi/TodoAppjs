@@ -94,3 +94,7 @@ footer {
     color: #838383;
     margin-left: 20px;
 }
+
+.list {
+    display: flex;
+}
